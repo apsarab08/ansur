@@ -5,7 +5,7 @@
   tasks:
     - name: Copy WAR file to Tomcat
       copy:
-        src: "/var/snap/jenkins/4870/workspace/ansur/target/ansur.war"
+        src: "/var/snap/jenkins/common/workspace/ansur/target/ansur.war"
         dest: "/opt/tomcat/webapps/ansur.war"
         remote_src: no
 
@@ -13,3 +13,4 @@
       systemd:
         name: tomcat
         state: restarted
+        enabled: yes
